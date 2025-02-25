@@ -8,3 +8,4 @@ import "./task-07.js";
 import "./task-08.js";
 import "./task-09.js";
 import "./task-10.js";
+import "./task-11.js";
