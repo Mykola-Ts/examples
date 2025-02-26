@@ -1,6 +1,6 @@
 // Написати функцію, яка приймає масив користувачів та буде повертати масив унікальних імен друзів (властивість friends), відсортований за алфавітом.
 
-const getSortedFriends = (users) =>
+const getSortedFriends = (users = []) =>
   users
     .flatMap(({ friends }) => friends)
     .filter((friend, idx, arr) => arr.indexOf(friend) === idx)

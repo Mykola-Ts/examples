@@ -7,7 +7,7 @@
 // console.log(isAnagram("hello", "world"));  // false
 
 // Спосіб 1
-function isAnagramMethod1(str1, str2) {
+function isAnagramMethod1(str1 = "", str2 = "") {
   if (str1.length !== str2.length) return false;
 
   return str1.split("").sort().join("") === str2.split("").sort().join("");
@@ -17,7 +17,7 @@ console.log("isAnagramMethod1", isAnagramMethod1("listen", "silent"));
 console.log("isAnagramMethod1", isAnagramMethod1("hello", "world"));
 
 // Спосіб 2
-function isAnagramMethod2(str1, str2) {
+function isAnagramMethod2(str1 = "", str2 = "") {
   if (str1.length !== str2.length) return false;
 
   const charCount = {};

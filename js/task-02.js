@@ -33,7 +33,7 @@ const products = [
   },
 ];
 
-function sumProducts(products) {
+function sumProducts(products = []) {
   for (let i = 0; i < products.length; i += 1) {
     for (let j = i + 1; j < products.length; j += 1) {
       if (products[i].id === products[j].id) {

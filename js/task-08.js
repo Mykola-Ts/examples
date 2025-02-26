@@ -10,7 +10,7 @@
 // // ["apple", "banana", "orange"]
 
 // Спосіб 1
-const uniqueValues = (arr) => [...new Set(arr)];
+const uniqueValues = (arr = []) => [...new Set(arr)];
 
 const fruits = [
   "apple",
@@ -31,7 +31,7 @@ console.log("uniqueNumbersMethod1:", uniqueValues(numbers));
 
 // Спосіб 2
 
-const uniqueVal = (arr) => {
+const uniqueVal = (arr = []) => {
   const newArr = [];
 
   for (let i = 0; i < arr.length; i += 1) {
