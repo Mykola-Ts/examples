@@ -49,3 +49,96 @@ console.log("Method3", hasEqualXOMethod3("xooxx")); // false
 console.log("Method3", hasEqualXOMethod3("ooxXm")); // true
 console.log("Method3", hasEqualXOMethod3("zpzpzpp")); // true
 console.log("Method3", hasEqualXOMethod3("zzoo")); // false
+
+// Task Description
+// Implement a function that checks whether a given string contains the same number of two specified letters. The function should be case insensitive and return a boolean value.
+
+function hasEqualLetterCount({ str, firstLetter, secondLetter }) {
+  const letters = str.toLowerCase().split("");
+  const firstLetterLowerCase = firstLetter.toLowerCase();
+  const secondLetterLowerCase = secondLetter.toLowerCase();
+  const qtyFirstLetter = letters.filter(
+    (letter) => letter === firstLetterLowerCase
+  ).length;
+  const qtySecondLetter = letters.filter(
+    (letter) => letter === secondLetterLowerCase
+  ).length;
+
+  return qtyFirstLetter === qtySecondLetter;
+}
+
+console.log(
+  hasEqualLetterCount({ str: "aabb", firstLetter: "a", secondLetter: "b" })
+); // true
+console.log(
+  hasEqualLetterCount({ str: "aaabb", firstLetter: "a", secondLetter: "b" })
+); // false
+console.log(
+  hasEqualLetterCount({
+    str: "HelloWorld",
+    firstLetter: "l",
+    secondLetter: "o",
+  })
+); // false
+console.log(
+  hasEqualLetterCount({ str: "TestCase", firstLetter: "t", secondLetter: "s" })
+); // true
+console.log(
+  hasEqualLetterCount({
+    str: "Mississippi",
+    firstLetter: "s",
+    secondLetter: "p",
+  })
+); // false
+
+// Method 2
+function hasEqualLetterCountMethod2({ str, firstLetter, secondLetter }) {
+  const firstLetterPattern = new RegExp(firstLetter, "gi");
+  const secondLetterPattern = new RegExp(secondLetter, "gi");
+
+  return (
+    (str.match(firstLetterPattern) || []).length ===
+    (str.match(secondLetterPattern) || []).length
+  );
+}
+
+console.log(
+  "Method2",
+  hasEqualLetterCountMethod2({
+    str: "aabb",
+    firstLetter: "a",
+    secondLetter: "b",
+  })
+); // true
+console.log(
+  "Method2",
+  hasEqualLetterCountMethod2({
+    str: "aaabb",
+    firstLetter: "a",
+    secondLetter: "b",
+  })
+); // false
+console.log(
+  "Method2",
+  hasEqualLetterCountMethod2({
+    str: "HelloWorld",
+    firstLetter: "l",
+    secondLetter: "o",
+  })
+); // false
+console.log(
+  "Method2",
+  hasEqualLetterCountMethod2({
+    str: "TestCase",
+    firstLetter: "t",
+    secondLetter: "s",
+  })
+); // true
+console.log(
+  "Method2",
+  hasEqualLetterCountMethod2({
+    str: "Mississippi",
+    firstLetter: "s",
+    secondLetter: "p",
+  })
+); // false
