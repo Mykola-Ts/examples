@@ -15,3 +15,4 @@ import "./task-14.js";
 import "./task-15.js";
 import "./task-16.js";
 import "./task-17.js";
+import "./task-18.js";
