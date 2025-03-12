@@ -19,3 +19,4 @@ import "./task-18.js";
 import "./task-19.js";
 import "./task-20.js";
 import "./task-21.js";
+import "./task-22.js";
