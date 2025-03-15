@@ -22,3 +22,4 @@ import "./task-21.js";
 import "./task-22.js";
 import "./task-23.js";
 import "./task-24.js";
+import "./task-25.js";
