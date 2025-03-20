@@ -26,3 +26,4 @@ import "./task-25.js";
 import "./task-26.js";
 import "./task-27.js";
 import "./task-28.js";
+import "./task-29.js";
