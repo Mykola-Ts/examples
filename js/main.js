@@ -31,3 +31,4 @@ import "./task-30.js";
 import "./task-31.js";
 import "./task-32.js";
 import "./task-33.js";
+import "./task-34.js";
