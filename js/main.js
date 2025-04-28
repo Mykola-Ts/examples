@@ -40,3 +40,4 @@ import "./task-39.js";
 import "./task-40.js";
 import "./task-41.js";
 import "./task-42.js";
+import "./task-43.js";
