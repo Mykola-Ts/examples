@@ -21,9 +21,7 @@ function countAddresses(ip) {
   let count = 0;
 
   for (let i = arrLength - 1, j = 1; i >= 0; i -= 1, j *= 256) {
-    i === arrLength - 1
-      ? (count += Number(arr[i]))
-      : (count += Number(arr[i]) * j);
+    count += Number(arr[i]) * j;
   }
 
   return count;
