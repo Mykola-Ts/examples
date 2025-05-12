@@ -9,18 +9,14 @@
 // * With input "20.0.0.10", "20.0.1.0"  => return 246
 
 function ipsBetween(start, end) {
-  const startIPCount = countAddresses(start);
-  const endIPCount = countAddresses(end);
-
-  return endIPCount - startIPCount;
+  return countAddresses(end) - countAddresses(start);
 }
 
 function countAddresses(ip) {
   const arr = ip.split(".");
-  const arrLength = arr.length;
   let count = 0;
 
-  for (let i = arrLength - 1, j = 1; i >= 0; i -= 1, j *= 256) {
+  for (let i = arr.length - 1, j = 1; i >= 0; i -= 1, j *= 256) {
     count += Number(arr[i]) * j;
   }
 
