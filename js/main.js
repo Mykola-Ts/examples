@@ -51,3 +51,4 @@ import "./task-50.js";
 import "./task-51.js";
 import "./task-52.js";
 import "./task-53.js";
+import "./task-54.js";
