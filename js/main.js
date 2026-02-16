@@ -71,3 +71,4 @@ import "./task-70.js";
 import "./task-71.js";
 import "./task-72.js";
 import "./task-73.js";
+import "./task-74.js";
