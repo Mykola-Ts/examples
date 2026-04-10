@@ -19,3 +19,11 @@ function getCount(str = "") {
 }
 
 console.log(getCount("abracadabra")); // 5
+
+// Method 2
+
+function getCountMethod2(str) {
+  return (str.match(/[aeiou]/gi) || []).length;
+}
+
+console.log(getCountMethod2("abracadabra")); // 5
