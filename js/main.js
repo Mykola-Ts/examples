@@ -83,3 +83,4 @@ import "./task-82.js";
 import "./task-83.js";
 import "./task-84.js";
 import "./task-85.js";
+import "./task-86.js";
