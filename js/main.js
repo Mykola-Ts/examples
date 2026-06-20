@@ -93,3 +93,4 @@ import "./task-92.js";
 import "./task-93.js";
 import "./task-94.js";
 import "./task-95.js";
+import "./task-96.js";
