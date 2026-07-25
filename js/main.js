@@ -109,3 +109,4 @@ import "./task-108.js";
 import "./task-109.js";
 import "./task-110.js";
 import "./task-111.js";
+import "./task-112.js";
