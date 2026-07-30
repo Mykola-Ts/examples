@@ -25,12 +25,24 @@ function encryptThis(text = "") {
     .map((word) => {
       const length = word.length;
 
-      return length > 1
-        ? word[0].charCodeAt(0) +
+      switch (length) {
+        case 0:
+          return text;
+
+        case 1:
+          return word[0].charCodeAt(0);
+
+        case 2:
+          return word[0].charCodeAt(0) + word[1];
+
+        default:
+          return (
+            word[0].charCodeAt(0) +
             word[length - 1] +
             word.slice(2, length - 1) +
             word[1]
-        : word[0].charCodeAt(0);
+          );
+      }
     })
     .join(" ");
 }
