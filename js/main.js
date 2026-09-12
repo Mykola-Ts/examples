@@ -123,3 +123,4 @@ import "./task-122.js";
 import "./task-123.js";
 import "./task-124.js";
 import "./task-125.js";
+import "./task-126.js";
