@@ -108,3 +108,45 @@ console.log(battle("hello world", "world hello")); // "Draw"
 console.log(battle("git checkout", "git switch")); // "We win"
 console.log(battle("Cheeseburger with fries", "Cheeseburger with Fries")); // "We lose"
 console.log(battle("We must never surrender", "Our team must win")); // "Draw"
+
+// Method2
+function battleMethod2(ourTeam = "", opponent = "") {
+  const getWordValue = (word) =>
+    [...word].reduce((acc, char) => {
+      const value = char.toLowerCase().charCodeAt(0) - 96;
+
+      return acc + (char === char.toUpperCase() ? value * 2 : value);
+    }, 0);
+
+  const ourWords = ourTeam.split(" ");
+  const opponentWords = opponent.split(" ");
+  let result = 0;
+
+  ourWords.forEach((word, idx) => {
+    const ourValue = getWordValue(word);
+    const opponentValue = getWordValue(opponentWords[idx]);
+
+    if (ourValue > opponentValue) result += 1;
+    else if (ourValue < opponentValue) result -= 1;
+  });
+
+  if (!result) {
+    return "Draw";
+  }
+
+  return result > 0 ? "We win" : "We lose";
+}
+
+console.log("Method2", battleMethod2("hello world", "hello word")); // "We win"
+console.log("Method2", battleMethod2("Hello world", "hello world")); // "We win"
+console.log("Method2", battleMethod2("lorem ipsum", "kitty ipsum")); // "We lose"
+console.log("Method2", battleMethod2("hello world", "world hello")); // "Draw"
+console.log("Method2", battleMethod2("git checkout", "git switch")); // "We win"
+console.log(
+  "Method2",
+  battleMethod2("Cheeseburger with fries", "Cheeseburger with Fries"),
+); // "We lose"
+console.log(
+  "Method2",
+  battleMethod2("We must never surrender", "Our team must win"),
+); // "Draw"
