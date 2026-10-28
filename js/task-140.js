@@ -25,3 +25,13 @@ console.log(mask("4012-8888-8888-1881")); // "****-****-****-1881"
 console.log(mask("5105 1051 0510 5100")); // "**** **** **** 5100"
 console.log(mask("6011 1111 1111 1117")); // "**** **** **** 1117"
 console.log(mask("2223-0000-4845-0010")); // "****-****-****-0010"
+
+// Method2
+function maskMethod2(card = "") {
+  return card.replace(/\d(?=.*\d{4}$)/g, "*");
+}
+
+console.log("Method2", maskMethod2("4012-8888-8888-1881")); // "****-****-****-1881"
+console.log("Method2", maskMethod2("5105 1051 0510 5100")); // "**** **** **** 5100"
+console.log("Method2", maskMethod2("6011 1111 1111 1117")); // "**** **** **** 1117"
+console.log("Method2", maskMethod2("2223-0000-4845-0010")); // "****-****-****-0010"
