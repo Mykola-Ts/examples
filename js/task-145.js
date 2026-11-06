@@ -13,15 +13,18 @@
 // Waiting:5. spookify("thE_hAUntEd-hOUsE-Is-fUll_Of_ghOsts") should return "ThE~hAuNtEd~HoUsE~iS~fUlL~oF~gHoStS".
 
 function spookify(boo = "") {
-  for (let i = 0; i < boo.length; ) {
-    console.log(boo[i].match(/[a-zA-Z]/));
-    if (boo[i].match(/[a-zA-Z]/)) {
-      console.log(boo[i]);
+  let count = 1;
+  const symbols = boo.split("");
+
+  for (let i = 0; i < symbols.length; i += 1) {
+    if (symbols[i].match(/[a-zA-Z]/)) {
+      symbols[i] =
+        count % 2 ? symbols[i].toUpperCase() : symbols[i].toLowerCase();
+      count += 1;
     }
-    i += 1;
   }
 
-  return boo;
+  return symbols.join("").replace(/[-_]/g, "~");
 }
 
 console.log(spookify("hello_world")); // "HeLlO~wOrLd"
