@@ -143,3 +143,4 @@ import "./task-142.js";
 import "./task-143.js";
 import "./task-144.js";
 import "./task-145.js";
+import "./task-146.js";
