@@ -30,3 +30,25 @@ console.log(getWeekday("1999-12-31")); // Friday
 console.log(getWeekday("1111-11-11")); // Saturday
 console.log(getWeekday("2112-12-21")); // Wednesday
 console.log(getWeekday("2345-10-01")); // Monday
+
+// Method2
+function getWeekdayMethod2(dateString) {
+  const WEEK_DAYS = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  const date = new Date(dateString);
+
+  return WEEK_DAYS[date.getDay()];
+}
+
+console.log("Method2", getWeekdayMethod2("2025-11-06")); // Thursday
+console.log("Method2", getWeekdayMethod2("1999-12-31")); // Friday
+console.log("Method2", getWeekdayMethod2("1111-11-11")); // Saturday
+console.log("Method2", getWeekdayMethod2("2112-12-21")); // Wednesday
+console.log("Method2", getWeekdayMethod2("2345-10-01")); // Monday
