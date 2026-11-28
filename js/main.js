@@ -148,3 +148,4 @@ import "./task-147.js";
 import "./task-148.js";
 import "./task-149.js";
 import "./task-150.js";
+import "./task-151.js";
